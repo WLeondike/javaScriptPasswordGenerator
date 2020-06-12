@@ -19,10 +19,10 @@ function generatePassword() {
 
   if (numOfChar > 7 && numOfChar < 127) {
     //Script runs through confirms to declare types of characters requred for your password
-    var confirmUpper = confirm("Do you want uppercase characters?");
-    var confirmLower = confirm("Do you want lowercase characters?");
-    var confirmSpecial = confirm("Do you want special characters");
-    var confirmNum = confirm("Do you want numbers?");
+    var confirmUpper = confirm("Would you like uppercase characters?");
+    var confirmLower = confirm("Would you like lowercase characters?");
+    var confirmSpecial = confirm("Would you like special characters");
+    var confirmNum = confirm("Would you like numbers?");
 
     if (confirmUpper) {
       password += stylePassword.concat(arrayUpper);
@@ -49,8 +49,10 @@ function generatePassword() {
     return finalPassword
     
     //when less than 8 characters or greather than 128 characters are entered, alert else statment. 
-  } else
-    alert("Please choose between 8 and 128 characters")
+   } else 
+    alert("Please choose between 8 and 128 characters");
+   
+
     
 }
 
