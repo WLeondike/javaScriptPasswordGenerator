@@ -24,18 +24,22 @@ function generatePassword() {
     var confirmSpecial = confirm("Would you like special characters");
     var confirmNum = confirm("Would you like numbers?");
 
+    //selecting upperCase
     if (confirmUpper) {
       password += stylePassword.concat(arrayUpper);
     }
 
+    //selecting lowerCase
     if (confirmLower) {
       password += stylePassword.concat(arrayLower);
     }
 
+    //selecting numbers
     if (confirmNum) {
       password += stylePassword.concat(arrayNum);
     }
 
+    //selecting special characters
     if (confirmSpecial) {
       password += stylePassword.concat(arraySpecial);
     }
@@ -45,17 +49,13 @@ function generatePassword() {
     for (let index = 0; index < numOfChar; index++) {
       finalPassword += password.charAt(Math.floor(Math.random() * password.length));
     }
-
+  
     return finalPassword
-    
+
     //when less than 8 characters or greather than 128 characters are entered, alert else statment. 
-   } else 
-    alert("Please choose between 8 and 128 characters");
-   
-
-    
+   } else
+    alert("Please choose a number between 8 and 128"); 
 }
-
 
 // Write password to the #password input
 function writePassword() {
@@ -65,7 +65,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
